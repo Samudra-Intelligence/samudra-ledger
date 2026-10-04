@@ -1,0 +1,9 @@
+{
+  "file": "prediction_2026-08-20.csv",
+  "frozen_on": "2026-08-20",
+  "rows": 323522,
+  "horizon_months": 18,
+  "data_through": "2026-06-01",
+  "sha256_16": "036c4c5d4bc71793",
+  "top_k_tracked": 250
+}
