@@ -42,6 +42,7 @@ From Entry #2 onward, the external timestamp is created on the origin date itsel
 | Window | 18 months from origin |
 | Grades | on/after 2028-02-20, against recorded deeds |
 | Status | **PENDING** |
+| Zenodo (this entry) | version DOI `10.5281/zenodo.23049053` |
 
 *Further entries are appended here as they freeze. Entries are append-only; no entry is ever edited or removed.*
 
