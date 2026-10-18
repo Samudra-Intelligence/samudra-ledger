@@ -44,6 +44,38 @@ From Entry #2 onward, the external timestamp is created on the origin date itsel
 | Status | **PENDING** |
 | Zenodo (this entry) | version DOI `10.5281/zenodo.23049053` |
 
+### Entry #2 — Statewide
+| Field | Value |
+|---|---|
+| File | `prediction_2026-10-18.csv` |
+| Predictions | 617,943 |
+| Coverage | **all 67 Florida counties** |
+| SHA-256 | `246c32420bb5c07f8a2723d98d1402b7ab2bc2c5c09940f234306c013b0a1f42` |
+| Frozen | 2026-10-18 |
+| Independently timestamped | **2026-10-18 — the same day it froze** (OpenTimestamps; proof file: `prediction_2026-10-18.csv.ots`) |
+| Window | 18 months from origin |
+| Grades | on/after 2028-04-18, against recorded deeds |
+| Roll vintage | 2026P (preliminary), uniform across all 67 — see below |
+| Status | **PENDING** |
+
+**On the 2026P vintage, stated plainly.** Florida DOR deletes preliminary rolls
+from its portal once Final is posted. At freeze time 2026 Final existed for only
+48 of 67 counties — and not for Miami-Dade or Broward — so the only way to freeze
+a uniform statewide book was the preliminary vintage, which the source has since
+withdrawn. A verifier therefore cannot re-download our inputs. So we hashed them
+instead: every one of the 134 input files is listed with its SHA-256 in
+`INPUTS_SHA256SUMS`, archived under object-lock, and verified 134/134 by
+re-downloading and re-hashing. Per-county vintage is recorded in the entry's
+metadata. We would rather publish the awkward fact than a book you cannot check.
+
+**On what this book can and cannot claim.** Deed history is not uniform across
+Florida. Thirteen counties have records back to 2015; the other 54 begin
+2025-01-01. Backtest folds before 2024 are therefore observable in only those 13
+counties, and any lift quoted from them is a 13-county figure, not a statewide
+one. The first substantially statewide fold is 2025-01-01, at 17 of 18 months
+observable. This book is the first statewide freeze; it has not been graded, and
+nothing here is a result.
+
 *Further entries are appended here as they freeze. Entries are append-only; no entry is ever edited or removed.*
 
 ---
