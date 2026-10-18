@@ -81,6 +81,60 @@ nothing here is a result.
 
 ---
 
+## ERRATA
+
+Appended, never substituted. An entry's own block above is never edited; defects
+found after publication are recorded here, under the date they were found.
+
+### E-1 · 2026-10-18 — cross-vintage sale duplication in the merged sales history
+
+**What was wrong.** Each annual Florida DOR sales file (SDF) carries roughly two
+years of sales, so adjacent vintages list the same sale twice. The copies differ
+in their assessment-year field, so the merge step's whole-row de-duplication kept
+both. The per-parcel count of prior qualified sales — a model input, and the
+trigger for the "trades often" signal — was therefore inflated wherever a county's
+history was assembled from more than one vintage.
+
+**Measured, not estimated.** On Manatee across ten vintages: 582,215 raw rows,
+of which **46.8% were cross-vintage duplicates that the old merge removed none
+of**. Prior-qualified-sale counts were inflated on **87.7%** of parcels (mean
+2.572 against a true 1.305). The "trades often" signal fired on 98,060 parcels
+where it should have fired on 29,290 — **68,770 false positives, 68,621 of them
+parcels that had sold exactly once**.
+
+**What it touches.**
+
+- **Entry #2** (statewide, 67 counties). Thirteen counties are assembled from
+  multiple vintages. **62.1% of the entry's 617,943 rows, and 81.7% of its top
+  decile, come from those thirteen.** The freeze log records all thirteen merging
+  at "0 dropped", which is the defect's signature.
+- **Entry #1** (founding book, 11 counties). Its eleven counties are *exactly* the
+  eleven for which a ten-vintage history was assembled, and the merge code
+  predates the freeze by thirteen days. **Entry #1's book and the eleven-county
+  Backtest Atlas are affected too.** Every validation figure drawn from that
+  Atlas — including the top-decile lift range quoted publicly — is suspect until
+  reproduced on corrected data.
+
+**What we are not doing.** We are not revising either frozen file, and not
+withdrawing either entry. Both are published, hashed and externally timestamped;
+a frozen book is a record of what we predicted, including when we predicted it
+with a defect we had not yet found. The 2028 grades will measure these books as
+they stand. That is the protocol working, not a loophole in it.
+
+**What we are doing.** The defect is fixed in the pipeline
+([samudra-engine PR #5](https://github.com/Samudra-Intelligence/samudra-engine/pull/5),
+merged 2026-10-18, the same day Entry #2 published). The Backtest Atlas is being
+reproduced on corrected data and the corrected figures will be published with the
+old-versus-new difference shown per fold, not quietly swapped. The next entry
+freezes on corrected data. Any figure sourced from the affected Atlas should be
+treated as provisional until that reproduction is published.
+
+Found and disclosed the same day Entry #2 published.
+
+
+
+---
+
 ## HOW TO VERIFY US
 
 1. **Today:** confirm the timestamp. Take `prediction_2026-08-20.csv.ots` from this deposit and check it at opentimestamps.org (or with the open-source `ots` client). It proves a file with the digest above existed no later than the stamped date.
