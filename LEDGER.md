@@ -55,4 +55,30 @@ From Entry #2 onward, the external timestamp is created on the origin date itsel
 
 *No rate without its numerator, denominator, and window.*
 
+---
+
+## WHERE THIS IS PUBLISHED
+
+Entry #1 went public **2026-10-18**. Three independent anchors, any one of which
+can be checked without our cooperation:
+
+| anchor | locator |
+|---|---|
+| GitHub (browsable) | `github.com/Samudra-Intelligence/samudra-ledger` — public; release tag `entry-1` |
+| OpenTimestamps (Bitcoin) | `entry-1/prediction_2026-08-20.csv.ots` (654 bytes), stamped 2026-09-29 |
+| Zenodo (citable) | concept DOI `10.5281/zenodo.23049052` · entry-1 version DOI `10.5281/zenodo.23049053` |
+
+What is published now, and what is not: the digest, the metadata, the timestamp
+proof and this protocol are public today. **The frozen CSV itself is withheld
+until grading day (2028-02-20)** — it contains raw propensity values, and a live
+book is product. On grading day the full CSV is published verbatim, propensity
+column included, and any reader must be able to reproduce
+`036c4c5d…512a82d6` from it. A graded, expired book is evidence, not product.
+
+Reproduce the published digest yourself, no account needed:
+
+```
+curl -s https://raw.githubusercontent.com/Samudra-Intelligence/samudra-ledger/main/entry-1/SHA256SUMS
+```
+
 **Contact:** Samudra LLC, Sarasota, Florida · Cite as: "Samudra Intelligence Ledger, Zenodo, DOI 10.5281/zenodo.23049053"
