@@ -81,4 +81,4 @@ Reproduce the published digest yourself, no account needed:
 curl -s https://raw.githubusercontent.com/Samudra-Intelligence/samudra-ledger/main/entry-1/SHA256SUMS
 ```
 
-**Contact:** Samudra LLC, Sarasota, Florida · Cite as: "Samudra Intelligence Ledger, Zenodo, DOI 10.5281/zenodo.23049053"
+**Contact:** Samudra LLC, Sarasota, Florida · Cite as: "Samudra Intelligence Ledger, Zenodo, DOI 10.5281/zenodo.23049052" (concept DOI — always resolves to the current version; Entry #1's own version DOI is 10.5281/zenodo.23049053)
