@@ -56,6 +56,7 @@ From Entry #2 onward, the external timestamp is created on the origin date itsel
 | Window | 18 months from origin |
 | Grades | on/after 2028-04-18, against recorded deeds |
 | Roll vintage | 2026P (preliminary), uniform across all 67 — see below |
+| Zenodo (this entry) | version DOI `10.5281/zenodo.23460579` |
 | Status | **PENDING** |
 
 **On the 2026P vintage, stated plainly.** Florida DOR deletes preliminary rolls
@@ -99,7 +100,7 @@ can be checked without our cooperation:
 |---|---|
 | GitHub (browsable) | `github.com/Samudra-Intelligence/samudra-ledger` — public; release tag `entry-1` |
 | OpenTimestamps (Bitcoin) | `entry-1/prediction_2026-08-20.csv.ots` (654 bytes), stamped 2026-09-29 |
-| Zenodo (citable) | concept DOI `10.5281/zenodo.23049052` · entry-1 version DOI `10.5281/zenodo.23049053` |
+| Zenodo (citable) | concept DOI `10.5281/zenodo.23049052` (always resolves to the current version) · entry-1 `10.5281/zenodo.23049053` · entry-2 `10.5281/zenodo.23460579` |
 
 What is published now, and what is not: the digest, the metadata, the timestamp
 proof and this protocol are public today. **The frozen CSV itself is withheld
