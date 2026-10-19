@@ -77,6 +77,43 @@ one. The first substantially statewide fold is 2025-01-01, at 17 of 18 months
 observable. This book is the first statewide freeze; it has not been graded, and
 nothing here is a result.
 
+### Entry #3 — Statewide, corrected sales history
+| Field | Value |
+|---|---|
+| File | `prediction_2026-10-19.csv` |
+| Predictions | 617,943 |
+| Coverage | **all 67 Florida counties** |
+| SHA-256 | `3a64c3b1fe0a7c9e2d2d30e6a66de642dfeda7ed161cdcb85206f5ecf00fac9a` |
+| Frozen | 2026-10-19 |
+| Independently timestamped | **2026-10-19 — the same day it froze** (OpenTimestamps; proof file: `prediction_2026-10-19.csv.ots`) |
+| Window | 18 months from origin |
+| Grades | on/after 2028-04-19, against recorded deeds |
+| Roll vintage | 2026P (preliminary), uniform across all 67 — same corpus as Entry #2 |
+| Zenodo (this entry) | version DOI pending — recorded on publication |
+| Status | **PENDING** |
+
+**Why this entry exists.** Entry #2, frozen the day before, was built on a sales
+history that double-counted sales appearing in more than one annual vintage —
+recorded in ERRATA E-1 below. Entry #2 is not withdrawn and not revised: it is
+published, hashed and timestamped, and it will be graded as it stands. Entry #3
+is the same universe, the same inputs and the same 2026P roll vintage, recomputed
+on a corrected merge. The input manifest is byte-identical to Entry #2's
+(`INPUTS_SHA256SUMS`, self-digest `f26fb53b…`), because the defect was in how the
+inputs were combined, not in the inputs themselves.
+
+**What changed, measured.** Across the thirteen counties assembled from multiple
+vintages, the corrected merge removes the duplicates the old one kept — Broward
+1,518,315 rows to 940,286, Charlotte 541,499 to 356,737. Statewide the walk-forward
+top-decile lift at the 2019 origin moves from 3.87x to 3.57x, and every graded fold
+stays under the leakage rail (highest AUC 0.822 against a 0.85 limit). Corrections
+ran in both directions, which is what a genuine de-duplication looks like.
+
+**What is still true of both entries.** Deed history is not uniform across Florida:
+thirteen counties reach back to 2015, the other fifty-four begin 2025-01-01.
+Backtest folds before 2024 are observable only in those thirteen, so any lift
+quoted from them is a thirteen-county figure, not a statewide one. Neither entry
+has been graded. Nothing here is a result.
+
 *Further entries are appended here as they freeze. Entries are append-only; no entry is ever edited or removed.*
 
 ---

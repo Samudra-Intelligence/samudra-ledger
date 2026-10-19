@@ -1,0 +1,17 @@
+{
+  "file": "prediction_2026-10-19.csv",
+  "frozen_on": "2026-10-19",
+  "rows": 617943,
+  "horizon_months": 18,
+  "data_through": "2026-06-01",
+  "sha256_16": "3a64c3b1fe0a7c9e",
+  "top_k_tracked": 250,
+  "sha256": "3a64c3b1fe0a7c9e2d2d30e6a66de642dfeda7ed161cdcb85206f5ecf00fac9a",
+  "sealed_on": "2026-10-19",
+  "window_end": "2028-04-19",
+  "roll_vintage": "2026P",
+  "counties": 67,
+  "inputs_manifest": "ledger/INPUTS_SHA256SUMS",
+  "per_county_vintage": "ledger/PER_COUNTY_VINTAGE_2026P.json",
+  "inputs_archive": "s3://samudra-ledger-archive-969739653398/inputs/2026P/ (Object Lock, versioned; 134 files verified 134/134 by re-download hash)"
+}
