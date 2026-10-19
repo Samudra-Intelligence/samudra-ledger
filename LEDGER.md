@@ -89,7 +89,7 @@ nothing here is a result.
 | Window | 18 months from origin |
 | Grades | on/after 2028-04-19, against recorded deeds |
 | Roll vintage | 2026P (preliminary), uniform across all 67 — same corpus as Entry #2 |
-| Zenodo (this entry) | version DOI pending — recorded on publication |
+| Zenodo (this entry) | version DOI `10.5281/zenodo.23484313` |
 | Status | **PENDING** |
 
 **Why this entry exists.** Entry #2, frozen the day before, was built on a sales
